@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment - 05</title>
-</head>
-<body>
-    
-</body>
+    <!-- DaisyUI + Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navColor: "#f9f7f3",
+              btnColor: "rgb(180, 244, 97)",
+              btnHover: "#000000",
+              moneyColor: "rgba(17, 17, 17, 0.7)",
+              textColor: "rgb(17, 17, 17)",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Lexend">
+    <header>
+      <nav class="bg-navColor py-4 md:py-6 lg:py-8">
+        <section class="container mx-auto flex justify-between items-center">
+          <button class="btn btn-md bg-btnColor hover:bg-btnHover hover:text-white text-lg lg:text-lg xl:text-xl">Blog</button>
+          <div class="flex items-center gap-3">
+            <img class="w-7 lg:w-9" src="./assets/logo.png" alt="">
+            <h6 class="hidden md:block font-bold text-lg lg:text-lg xl:text-xl">Donate Bangladesh</h6>
+          </div>
+          <div class="flex items-center gap-2">
+            <img class="w-5 lg:w-7" src="./assets/coin.png" alt="">
+            <h6 class="text-moneyColor text-lg lg:text-lg xl:text-xl">15000</h6>
+            <span class="text-moneyColor text-lg lg:text-lg xl:text-xl">BDT</span>
+          </div>
+        </section>
+      </nav>
+    </header>
+  </body>
 </html>
