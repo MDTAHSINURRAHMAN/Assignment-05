@@ -9,6 +9,7 @@ const noakhaliDonate = document.getElementById('noakhaliDonation');
 const feniDonate = document.getElementById('feniDonation');
 const quotaDonate = document.getElementById('quotaDonation');
 const userMoney = document.getElementById('userMoney');
+const historyLi = document.getElementById('historyLi');
 
 donationBtn.addEventListener('click', function(event){
     event.preventDefault();
@@ -24,7 +25,7 @@ historyBtn.addEventListener('click', function(event){
 noakhaliDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
     const value = getInputValueById('noakhaliInputField');
-    if(isNaN(value) && value >= 0){
+    if(value >= 0){
         const noakhaliDonated = parseInt(getInnerText('noakhaliDonation'));
         const userHas = parseInt(getInnerText('userMoney'));
         const totalDonated = parseInt(value) + noakhaliDonated;
@@ -46,7 +47,7 @@ noakhaliDonateBtn.addEventListener('click', function(event){
 feniDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
     const value = getInputValueById('feniInputField');
-    if(isNaN(value) && value >= 0){
+    if(value >= 0){
         const feniDonated = parseInt(getInnerText('feniDonation'));
         const userHas = parseInt(getInnerText('userMoney'));
         const totalDonated = parseInt(value) + feniDonated;
@@ -68,7 +69,7 @@ feniDonateBtn.addEventListener('click', function(event){
 quotaDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
     const value = getInputValueById('quotaInputField');
-    if(isNaN(value) && value >= 0){
+    if(value >= 0){
         const quotaDonated = parseInt(getInnerText('quotaDonation'));
         const userHas = parseInt(getInnerText('userMoney'));
         const totalDonated = parseInt(value) + quotaDonated;

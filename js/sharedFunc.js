@@ -13,6 +13,9 @@ function getInputValueById(id){
     }
     if(f) return -1;
     else{
+        if(arr.length === 0){
+            return -1;
+        }
         let val = "";
         for(let x of arr){
             val += x;
@@ -24,4 +27,8 @@ function getInputValueById(id){
 function getInnerText(id){
     const textValue = document.getElementById(id).innerText;
     return textValue;
+}
+
+function historyUpdate(history, money, title){
+
 }
