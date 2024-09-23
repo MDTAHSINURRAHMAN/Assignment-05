@@ -7,9 +7,12 @@ const feniDonateBtn = document.getElementById('feniDonateBtn');
 const quotaDonateBtn = document.getElementById('quotaDonateBtn');
 const noakhaliDonate = document.getElementById('noakhaliDonation');
 const feniDonate = document.getElementById('feniDonation');
+const noakhaliTitle = document.getElementById('noakhaliTitle');
+const feniTitle = document.getElementById('feniTitle');
+const quotaTitle = document.getElementById('quotaTitle');
 const quotaDonate = document.getElementById('quotaDonation');
 const userMoney = document.getElementById('userMoney');
-const historyLi = document.getElementById('historyLi');
+const historyUl = document.getElementById('historyUl');
 
 donationBtn.addEventListener('click', function(event){
     event.preventDefault();
@@ -37,6 +40,7 @@ noakhaliDonateBtn.addEventListener('click', function(event){
         noakhaliDonate.innerText = totalDonated;
         userMoney.innerText = userChange;
         document.getElementById('noakhaliInputField').value = '';
+        historyUpdate(historyUl, value, noakhaliTitle.innerText);
     }
     else{
         document.getElementById('noakhaliInputField').value = '';
@@ -59,6 +63,7 @@ feniDonateBtn.addEventListener('click', function(event){
         feniDonate.innerText = totalDonated;
         userMoney.innerText = userChange;
         document.getElementById('feniInputField').value = '';
+        historyUpdate(historyUl, value, feniTitle.innerText);
     }
     else{
         document.getElementById('feniInputField').value = '';
@@ -81,6 +86,7 @@ quotaDonateBtn.addEventListener('click', function(event){
         quotaDonate.innerText = totalDonated;
         userMoney.innerText = userChange;
         document.getElementById('quotaInputField').value = '';
+        historyUpdate(historyUl, value, quotaTitle.innerText);
     }
     else{
         document.getElementById('quotaInputField').value = '';
