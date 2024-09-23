@@ -1,26 +1,3 @@
-## Design
-
-- **History Section**: Initially hidden and empty.
-
-## Functionalities
-
-- **Donation Functionality for Each Card**:
-  - When the "Donate Now" button is clicked:
-    - The donation input will be deducted from the total account balance, and the updated balance will be shown.
-    - The card’s current donation amount will increase.
-    - A meaningful notification will be added to the History section.
-- **Input Validation**:
-  - Show an alert if invalid data is found and stop the transaction.
-  - Validate the donation amount:
-    - If the donation amount is greater than the account balance.
-    - If the input field contains an invalid number.
-    - If the input field is empty.
-- **History Section**:
-  - The history section will display transaction notifications, including:
-    - Date and time of the transaction.
-    - Donation amount.
-    - Donation name.
-
 ## Challenges
 
 - **Sticky Navbar**: Make the navbar sticky to the top of the page.
@@ -33,5 +10,3 @@
 - **Toggle Active Status**: Toggle the active status of the "Donation" and "History" buttons:
   - Change the button color to indicate when it's active.
 - **Static Modal**: Display a static modal instead of an alert on a successful donation.
-- **Reusable Functions**: Use at least 2 common functions.
-- **Responsive Design**: Ensure the application is responsive for different screen sizes.
