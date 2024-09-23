@@ -42,7 +42,8 @@
       <nav class="bg-navColor bg-opacity-80 py-4 md:py-6 lg:py-8">
         <section class="container mx-auto flex justify-between items-center">
           <div class="px-2 md:px-0">
-            <button onclick="loadHome()"
+            <button
+              onclick="loadHome()"
               class="btn btn-md bg-btnColor hover:bg-gray-100 hover:border-btnColor text-lg lg:text-lg xl:text-xl font-medium"
             >
               Home
@@ -71,8 +72,41 @@
         </section>
       </nav>
     </header>
-    
-    <main></main>
+
+    <main class="container mx-auto flex flex-col gap-4">
+      <div class="flex gap-3 mt-8 mb-8">
+        <h1 class="flex items-end font-bold text-xl lg:text-xl xl:text-3xl">Important FAQ</h1>
+        <img src="./assets/ques.png" alt="" />
+      </div>
+
+      <div class="collapse collapse-plus border rounded-lg">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus border border-gray-200 rounded-lg">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus border border-gray-200 rounded-lg">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          Click to open this one and close others
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </main>
     <footer></footer>
 
     <script src="js/script.js"></script>
