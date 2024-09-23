@@ -58,7 +58,7 @@
           <div class="flex items-center gap-2 px-2 md:px-0">
             <img class="w-6 lg:w-7" src="./assets/coin.png" alt="" />
             <div class="flex flex-col md:flex-row gap-0 md:gap-2">
-              <h6 class="text-moneyColor text-lg lg:text-lg xl:text-xl">
+              <h6 id="userMoney" class="text-moneyColor text-lg lg:text-lg xl:text-xl">
                 15000
               </h6>
               <span class="text-moneyColor text-lg lg:text-lg xl:text-xl"
@@ -100,7 +100,7 @@
               >
                 <img class="w-6 lg:w-7" src="./assets/coin.png" alt="" />
                 <div class="flex items-center gap-2">
-                  <h6 class="text-moneyColor text-sm lg:text-lg xl:text-lg">
+                  <h6 id="noakhaliDonation" class="text-moneyColor text-sm lg:text-lg xl:text-lg">
                     0
                   </h6>
                   <span class="text-moneyColor text-sm lg:text-lg xl:text-lg"
@@ -124,13 +124,14 @@
               <div class="mt-5 md:mt-6 xl:mt-12 flex flex-col gap-4">
                 <div>
                   <input
+                    id="noakhaliInputField"
                     type="text"
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full placeholder:text-gray-200"
                   />
                 </div>
                 <div class="mt-2 xl:mt-4">
-                  <button class="btn bg-btnColor w-full">Donate Now</button>
+                  <button id="noakhaliDonateBtn" class="btn bg-btnColor w-full">Donate Now</button>
                 </div>
               </div>
             </div>
@@ -252,5 +253,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/sharedFunc.js"></script>
   </body>
 </html>
