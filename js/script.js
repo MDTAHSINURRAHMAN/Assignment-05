@@ -13,6 +13,7 @@ const quotaTitle = document.getElementById('quotaTitle');
 const quotaDonate = document.getElementById('quotaDonation');
 const userMoney = document.getElementById('userMoney');
 const historyUl = document.getElementById('historyUl');
+const modal = document.getElementById('successModal');
 
 donationBtn.addEventListener('click', function(event){
     event.preventDefault();
@@ -24,6 +25,13 @@ historyBtn.addEventListener('click', function(event){
     historySection.classList.remove('hidden');
     donationSection.classList.add('hidden');
 });
+
+function loadBlog(){
+    window.location.href = "blog.html"
+}
+function loadHome(){
+    window.location.href = "index.html"
+}
 
 noakhaliDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
@@ -41,6 +49,7 @@ noakhaliDonateBtn.addEventListener('click', function(event){
         userMoney.innerText = userChange;
         document.getElementById('noakhaliInputField').value = '';
         historyUpdate(historyUl, value, noakhaliTitle.innerText);
+        modal.showModal();
     }
     else{
         document.getElementById('noakhaliInputField').value = '';
@@ -64,6 +73,7 @@ feniDonateBtn.addEventListener('click', function(event){
         userMoney.innerText = userChange;
         document.getElementById('feniInputField').value = '';
         historyUpdate(historyUl, value, feniTitle.innerText);
+        modal.showModal();
     }
     else{
         document.getElementById('feniInputField').value = '';
@@ -87,6 +97,7 @@ quotaDonateBtn.addEventListener('click', function(event){
         userMoney.innerText = userChange;
         document.getElementById('quotaInputField').value = '';
         historyUpdate(historyUl, value, quotaTitle.innerText);
+        modal.showModal();
     }
     else{
         document.getElementById('quotaInputField').value = '';

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment - 05</title>
+    <!-- DaisyUI + Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navColor: "#f9f7f3",
+              btnColor: "rgb(180, 244, 97)",
+              btnHover: "#000000",
+              moneyColor: "rgba(17, 17, 17, 0.7)",
+              textColor: "rgb(17, 17, 17)",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Lexend">
+    <header class="sticky z-10 top-0 backdrop-blur-md">
+      <nav class="bg-navColor bg-opacity-80 py-4 md:py-6 lg:py-8">
+        <section class="container mx-auto flex justify-between items-center">
+          <div class="px-2 md:px-0">
+            <button onclick="loadHome()"
+              class="btn btn-md bg-btnColor hover:bg-gray-100 hover:border-btnColor text-lg lg:text-lg xl:text-xl font-medium"
+            >
+              Home
+            </button>
+          </div>
+          <div class="flex items-center gap-3">
+            <img class="w-7 lg:w-9" src="./assets/logo.png" alt="" />
+            <h6 class="hidden md:block font-bold text-lg lg:text-lg xl:text-xl">
+              Donate Bangladesh
+            </h6>
+          </div>
+          <div class="flex items-center gap-2 px-2 md:px-0">
+            <img class="w-6 lg:w-7" src="./assets/coin.png" alt="" />
+            <div class="flex flex-col md:flex-row gap-0 md:gap-2">
+              <h6
+                id="userMoney"
+                class="text-moneyColor text-lg lg:text-lg xl:text-xl"
+              >
+                15000
+              </h6>
+              <span class="text-moneyColor text-lg lg:text-lg xl:text-xl"
+                >BDT</span
+              >
+            </div>
+          </div>
+        </section>
+      </nav>
+    </header>
+    
+    <main></main>
+    <footer></footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/sharedFunc.js"></script>
+  </body>
+</html>

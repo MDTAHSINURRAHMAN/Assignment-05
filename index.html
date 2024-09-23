@@ -43,6 +43,7 @@
         <section class="container mx-auto flex justify-between items-center">
           <div class="px-2 md:px-0">
             <button
+              onclick="loadBlog()"
               class="btn btn-md bg-btnColor hover:bg-gray-100 hover:border-btnColor text-lg lg:text-lg xl:text-xl font-medium"
             >
               Blog
@@ -113,7 +114,8 @@
                   >
                 </div>
               </div>
-              <h1 id="noakhaliTitle"
+              <h1
+                id="noakhaliTitle"
                 class="text-textColor font-semibold text-sm lg:text-lg xl:text-lg"
               >
                 Donate for Flood at Noakhali, Bangladesh
@@ -166,7 +168,8 @@
                   >
                 </div>
               </div>
-              <h1 id="feniTitle"
+              <h1
+                id="feniTitle"
                 class="text-textColor font-semibold text-sm lg:text-lg xl:text-lg"
               >
                 Donate for Flood Relief in Feni, Bangladesh
@@ -219,7 +222,8 @@
                   >
                 </div>
               </div>
-              <h1 id="quotaTitle"
+              <h1
+                id="quotaTitle"
                 class="text-textColor font-semibold text-sm lg:text-lg xl:text-lg"
               >
                 Aid for Injured in the Quota Movement, Bangladesh
@@ -250,6 +254,19 @@
             </div>
           </div>
         </section>
+        <dialog id="successModal" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box flex flex-col justify-center items-center gap-4">
+            <h3 class="font-bold text-lg lg:text-lg xl:text-xl">Congrates</h3>
+            <div><img src="./assets/coin.png" alt=""></div>
+            <p class="text-moneyColor text-xs md:text-sm">You Have Donated for HumanKind</p>
+            <span class="font-bold text-sm lg:text-sm xl:text-lg">Successfully</span>
+            <div class="modal-action">
+              <form method="dialog">
+                <button class="btn">Close Confirmation</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
       <section id="historySection" class="hidden history-section">
         <ul id="historyUl" class="flex flex-col gap-4">
