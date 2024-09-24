@@ -17,9 +17,12 @@ function getInputValueById(id){
             return -1;
         }
         let val = "";
+        let num = false;
         for(let x of arr){
+            if(x >= '1' && x <= '9') num = true;
             val += x;
         }
+        if(!num) return -1;
         return val;
     }
 }
