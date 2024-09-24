@@ -22,7 +22,7 @@ function getInputValueById(id){
             if(x >= '1' && x <= '9') num = true;
             val += x;
         }
-        if(!num) return -1;
+        if(!num) return -1; 
         return val;
     }
 }
