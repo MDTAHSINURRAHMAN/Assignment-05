@@ -35,9 +35,11 @@ function getInnerText(id){
 function historyUpdate(history, money, title){
     const currentDate = new Date();
     const formattedDate = `${currentDate.toDateString()} ${currentDate.toLocaleTimeString()}`;
+    const forIndex = title.indexOf('for');
+    const formattedTitle = title.substring(forIndex + 4).trim();
     history.innerHTML += `<li class="p-8 border border-gray-200 rounded-xl flex flex-col gap-4">
             <h1 class="font-bold text-lg lg:text-lg xl:text-xl">
-            ${money} Taka is Donated for ${title}
+            ${money} Taka is Donated for ${formattedTitle}
             </h1>
             <p class="text-moneyColor text-xs md:text-sm">
             Date: ${formattedDate} GMT +0600 (Bangladesh Standard Time)
