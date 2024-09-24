@@ -18,12 +18,24 @@ const modal = document.getElementById('successModal');
 donationBtn.addEventListener('click', function(event){
     event.preventDefault();
     donationSection.classList.remove('hidden');
+    donationBtn.classList.remove('bg-gray-200');
+    donationBtn.classList.add('bg-btnColor');
+    donationBtn.classList.add('hover:bg-btnColor');
     historySection.classList.add('hidden');
+    historyBtn.classList.remove('bg-btnColor');
+    historyBtn.classList.remove('hover:bg-btnColor');
+    historyBtn.classList.add('bg-gray-200');
 });
 historyBtn.addEventListener('click', function(event){
     event.preventDefault();
     historySection.classList.remove('hidden');
+    historyBtn.classList.remove('bg-gray-200');
+    historyBtn.classList.add('bg-btnColor');
+    historyBtn.classList.add('hover:bg-btnColor');
     donationSection.classList.add('hidden');
+    donationBtn.classList.remove('bg-btnColor');
+    donationBtn.classList.remove('hover:bg-btnColor');
+    donationBtn.classList.add('bg-gray-200');
 });
 
 function loadBlog(){
