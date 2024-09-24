@@ -39,12 +39,12 @@
   </head>
   <body class="font-Lexend">
     <header class="sticky z-10 top-0 backdrop-blur-md">
-      <nav class="bg-navColor bg-opacity-80 py-4 md:py-6 lg:py-8">
+      <nav class="bg-navColor bg-opacity-80 py-3 md:py-5 lg:py-6">
         <section class="container mx-auto flex justify-between items-center">
           <div class="px-2 md:px-0">
             <button
               onclick="loadHome()"
-              class="btn btn-md bg-btnColor hover:bg-gray-100 hover:border-btnColor text-lg lg:text-lg xl:text-xl font-medium"
+              class="btn btn-md bg-btnColor border-none shadow-none hover:bg-btnColor text-lg lg:text-lg xl:text-xl font-medium"
             >
               Home
             </button>
@@ -75,35 +75,57 @@
 
     <main class="container mx-auto flex flex-col gap-4">
       <div class="flex gap-3 mt-8 mb-8">
-        <h1 class="flex items-end font-bold text-xl lg:text-xl xl:text-3xl">Important FAQ</h1>
+        <h1 class="flex items-end font-bold text-xl lg:text-xl xl:text-3xl">
+          Important FAQ
+        </h1>
         <img src="./assets/ques.png" alt="" />
       </div>
 
       <div class="collapse collapse-plus border rounded-lg">
         <input type="radio" name="my-accordion-3" checked="checked" />
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          How can I make a donation?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p class="text-moneyColor">
+            You can make a donation by clicking on the "Donate Now" button on our website. If you have available coins in your account, simply enter the donation amount and confirm your contribution.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-plus border border-gray-200 rounded-lg">
         <input type="radio" name="my-accordion-3" />
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          Where will my donation go?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p class="text-moneyColor">
+            Your donation will be directed towards providing essential supplies
+            and aid to those affected by disasters and social movements in
+            Bangladesh. We ensure that all contributions are used efficiently
+            and transparently for relief efforts.
+          </p>
         </div>
       </div>
       <div class="collapse collapse-plus border border-gray-200 rounded-lg">
         <input type="radio" name="my-accordion-3" />
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+          Can I donate anonymously?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p class="text-moneyColor">
+            Currently, our donation system does not support anonymous donations. However, we value your privacy, and all personal information provided during the donation process is kept confidential.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-plus border border-gray-200 rounded-lg">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title text-xl font-medium">
+          How can I support the cause without donating money?
+        </div>
+        <div class="collapse-content">
+          <p class="text-moneyColor">
+            While donations are the most direct way to help, you can also support our cause by spreading the word. Share our website and mission on social media or with friends and family to raise awareness about the issues we're addressing.
+          </p>
         </div>
       </div>
     </main>
