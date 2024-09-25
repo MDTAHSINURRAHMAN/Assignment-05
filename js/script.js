@@ -47,72 +47,53 @@ function loadHome(){
 
 noakhaliDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
-    const value = getInputValueById('noakhaliInputField');
-    if(value >= 0){
-        const noakhaliDonated = parseInt(getInnerText('noakhaliDonation'));
-        const userHas = parseInt(getInnerText('userMoney'));
-        const totalDonated = parseInt(value) + noakhaliDonated;
-        const userChange = userHas - parseInt(value);
-        if(userChange < 0){
-            document.getElementById('noakhaliInputField').value = '';
-            return alert("Insufficient Amount");
-        }
-        noakhaliDonate.innerText = totalDonated;
-        userMoney.innerText = userChange;
+    const value = document.getElementById('noakhaliInputField').value;
+    const userHas = getInnerText('userMoney');
+    if(validate(value, userHas) === -1){
         document.getElementById('noakhaliInputField').value = '';
-        historyUpdate(historyUl, value, noakhaliTitle.innerText);
-        modal.showModal();
+        return;
     }
-    else{
-        document.getElementById('noakhaliInputField').value = '';
-        return alert('Give Valid Input');
-    }
+    const noakhaliDonated = getInnerText('noakhaliDonation');
+    const totalDonated = parseFloat(value) + parseFloat(noakhaliDonated);
+    const userChange = parseFloat(userHas) - parseFloat(value);
+    noakhaliDonate.innerText = totalDonated.toFixed(2);
+    userMoney.innerText = userChange.toFixed(2);
+    document.getElementById('noakhaliInputField').value = '';
+    historyUpdate(historyUl, value, noakhaliTitle.innerText);
+    modal.showModal();
 });
 
 feniDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
-    const value = getInputValueById('feniInputField');
-    if(value >= 0){
-        const feniDonated = parseInt(getInnerText('feniDonation'));
-        const userHas = parseInt(getInnerText('userMoney'));
-        const totalDonated = parseInt(value) + feniDonated;
-        const userChange = userHas - parseInt(value);
-        if(userChange < 0){
-            document.getElementById('feniInputField').value = '';
-            return alert("Insufficient Amount");
-        }
-        feniDonate.innerText = totalDonated;
-        userMoney.innerText = userChange;
+    const value = document.getElementById('feniInputField').value;
+    const userHas = getInnerText('userMoney');
+    if(validate(value, userHas) === -1){
         document.getElementById('feniInputField').value = '';
-        historyUpdate(historyUl, value, feniTitle.innerText);
-        modal.showModal();
+        return;
     }
-    else{
-        document.getElementById('feniInputField').value = '';
-        return alert('Give Valid Input');
-    }
+    const feniDonated = getInnerText('feniDonation');
+    const totalDonated = parseFloat(value) + parseFloat(feniDonated);
+    const userChange = parseFloat(userHas) - parseFloat(value);
+    feniDonate.innerText = totalDonated.toFixed(2);
+    userMoney.innerText = userChange.toFixed(2);
+    document.getElementById('feniInputField').value = '';
+    historyUpdate(historyUl, value, feniTitle.innerText);
+    modal.showModal();
 });
-
 quotaDonateBtn.addEventListener('click', function(event){
     event.preventDefault();
-    const value = getInputValueById('quotaInputField');
-    if(value >= 0){
-        const quotaDonated = parseInt(getInnerText('quotaDonation'));
-        const userHas = parseInt(getInnerText('userMoney'));
-        const totalDonated = parseInt(value) + quotaDonated;
-        const userChange = userHas - parseInt(value);
-        if(userChange < 0){
-            document.getElementById('quotaInputField').value = '';
-            return alert("Insufficient Amount");
-        }
-        quotaDonate.innerText = totalDonated;
-        userMoney.innerText = userChange;
+    const value = document.getElementById('quotaInputField').value;
+    const userHas = getInnerText('userMoney');
+    if(validate(value, userHas) === -1){
         document.getElementById('quotaInputField').value = '';
-        historyUpdate(historyUl, value, quotaTitle.innerText);
-        modal.showModal();
+        return;
     }
-    else{
-        document.getElementById('quotaInputField').value = '';
-        return alert('Give Valid Input');
-    }
+    const quotaDonated = getInnerText('quotaDonation');
+    const totalDonated = parseFloat(value) + parseFloat(quotaDonated);
+    const userChange = parseFloat(userHas) - parseFloat(value);
+    quotaDonate.innerText = totalDonated.toFixed(2);
+    userMoney.innerText = userChange.toFixed(2);
+    document.getElementById('quotaInputField').value = '';
+    historyUpdate(historyUl, value, quotaTitle.innerText);
+    modal.showModal();
 });

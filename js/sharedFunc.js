@@ -1,30 +1,14 @@
-function getInputValueById(id){
-    const inputValue = document.getElementById(id).value;
-    let arr = [];
-    let f = 0;
-    for(let x of inputValue){
-        if(x >= '0' && x <= '9'){
-            arr.push(x);
-        }
-        else{
-            f = 1;
-            break;
-        }
+function validate(a, c){
+    if(a <= 0 || isNaN(a) || a === ''){
+        alert("Give a valid input");
+        return -1;
     }
-    if(f) return -1;
-    else{
-        if(arr.length === 0){
-            return -1;
-        }
-        let val = "";
-        let num = false;
-        for(let x of arr){
-            if(x >= '1' && x <= '9') num = true;
-            val += x;
-        }
-        if(!num) return -1; 
-        return val;
+    const x = parseFloat(c) - parseFloat(a);
+    if(x < 0){
+        alert("Sorry! You don't have enough coins.");
+        return -1;
     }
+    return 1;
 }
 
 function getInnerText(id){

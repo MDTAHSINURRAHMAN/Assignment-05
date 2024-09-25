@@ -40,7 +40,9 @@
   <body class="font-Lexend">
     <header class="sticky z-10 top-0 backdrop-blur-md">
       <nav class="bg-navColor bg-opacity-80 py-3 md:py-5 lg:py-6">
-        <section class="container mx-auto flex justify-between items-center px-2">
+        <section
+          class="container mx-auto flex justify-between items-center px-2"
+        >
           <div class="">
             <button
               onclick="loadBlog()"
@@ -62,7 +64,7 @@
                 id="userMoney"
                 class="text-moneyColor text-lg lg:text-lg xl:text-xl"
               >
-                15000
+                1500
               </h6>
               <span class="text-moneyColor text-lg lg:text-lg xl:text-xl"
                 >BDT</span
@@ -132,7 +134,7 @@
                 <div>
                   <input
                     id="noakhaliInputField"
-                    type="text"
+                    type="number"
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full placeholder:text-gray-200"
                   />
@@ -175,13 +177,21 @@
                 Donate for Flood Relief in Feni, Bangladesh
               </h1>
               <h6 class="text-moneyColor text-xs md:text-sm">
-                The recent floods in Feni have devastated countless homes and vital infrastructure, leaving many families in urgent need of assistance. Your generous donation will provide essential supplies to those affected by this disaster, helping to restore hope and rebuild lives. Every contribution, no matter the size, makes a significant impact. Join us in supporting the relief efforts and making a positive difference in the lives of those in need. Together, we can help our community heal and recover from this tragedy.
+                The recent floods in Feni have devastated countless homes and
+                vital infrastructure, leaving many families in urgent need of
+                assistance. Your generous donation will provide essential
+                supplies to those affected by this disaster, helping to restore
+                hope and rebuild lives. Every contribution, no matter the size,
+                makes a significant impact. Join us in supporting the relief
+                efforts and making a positive difference in the lives of those
+                in need. Together, we can help our community heal and recover
+                from this tragedy.
               </h6>
               <div class="mt-5 md:mt-6 xl:mt-12 flex flex-col gap-4">
                 <div>
                   <input
                     id="feniInputField"
-                    type="text"
+                    type="number"
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full placeholder:text-gray-200"
                   />
@@ -224,13 +234,22 @@
                 Aid for Injured in the Quota Movement, Bangladesh
               </h1>
               <h6 class="text-moneyColor text-xs md:text-sm">
-                The recent Quota Movement has seen many brave individuals advocating for their rights, but unfortunately, it has also led to injuries and suffering among protesters. Your support is crucial in providing medical aid and necessary resources for those injured during the movement. Every donation, no matter how small, can help alleviate their pain and assist in their recovery. Join us in standing with those who have fought for their rights and help make a difference in their lives. Together, we can provide the support they need during this challenging time.
+                The recent Quota Movement has seen many brave individuals
+                advocating for their rights, but unfortunately, it has also led
+                to injuries and suffering among protesters. Your support is
+                crucial in providing medical aid and necessary resources for
+                those injured during the movement. Every donation, no matter how
+                small, can help alleviate their pain and assist in their
+                recovery. Join us in standing with those who have fought for
+                their rights and help make a difference in their lives.
+                Together, we can provide the support they need during this
+                challenging time.
               </h6>
               <div class="mt-5 md:mt-6 xl:mt-12 flex flex-col gap-4">
                 <div>
                   <input
                     id="quotaInputField"
-                    type="text"
+                    type="number"
                     placeholder="Write Donation Amount"
                     class="input input-bordered w-full placeholder:text-gray-200"
                   />
@@ -245,11 +264,17 @@
           </div>
         </section>
         <dialog id="successModal" class="modal modal-middle">
-          <div class="modal-box flex flex-col justify-center items-center gap-4">
+          <div
+            class="modal-box flex flex-col justify-center items-center gap-4"
+          >
             <h3 class="font-bold text-xl lg:text-xl xl:text-3xl">Congrates!</h3>
-            <div><img src="./assets/coin.png" alt=""></div>
-            <p class="text-moneyColor text-xs md:text-sm">You Have Donated for HumanKind</p>
-            <span class="font-bold text-sm lg:text-sm xl:text-lg">Successfully</span>
+            <div><img src="./assets/coin.png" alt="" /></div>
+            <p class="text-moneyColor text-xs md:text-sm">
+              You Have Donated for HumanKind
+            </p>
+            <span class="font-bold text-sm lg:text-sm xl:text-lg"
+              >Successfully</span
+            >
             <div class="modal-action">
               <form method="dialog">
                 <button class="btn">Close Confirmation</button>
